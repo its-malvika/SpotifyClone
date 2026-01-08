@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <aside class="sidebar">
+            <nav class="nav">
+                <button class="nav-option nav-option-active" aria-label="Home">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i>
+                    <span>Home</span>
+                </button>
+                <button class="nav-option" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <span>Search</span>
+                </button>
+            </nav>
+            <section class="library">
+                <div class="library-header">
+                    <button class="lib-options" aria-label="Your Library">
+                        <img src="./assets/library_icon.png" alt="Library icon">
+                        <span>Your Library</span>
+                    </button>
+                    <div class="library-icons">
+                        <button class="icon-btn" aria-label="Create new playlist">
+                            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                        </button>
+                        <button class="icon-btn" aria-label="More options">
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="lib-box">
+                    <div class="box">
+                        <p class="box-p1">Create your first playlist</p>
+                        <p class="box-p2">It's easy, we'll help you</p>
+                        <button class="badge">Create playlist</button>
+                    </div>
+                    <div class="box">
+                        <p class="box-p1">Let's find some podcasts to follow</p>
+                        <p class="box-p2">We'll keep you updated on new episodes</p>
+                        <button class="badge">Browse podcasts</button>
+                    </div>
+                </div>
+            </section>
+        </aside>
+        <main class="main-content">
+            <div class="sticky-nav">
+                <div class="sticky-nav-icons">
+                    <button class="nav-btn" aria-label="Previous">
+                        <img src="./assets/backward_icon.png" alt="Previous">
+                    </button>
+                    <button class="nav-btn hide" aria-label="Next">
+                        <img src="./assets/forward_icon.png" alt="Next">
+                    </button>
+                </div>
+                <div class="sticky-nav-options">
+                    <button class="badge nav-item hide">Explore Premium</button>
+                    <button class="badge nav-item dark-badge">
+                        <i class="fa-regular fa-circle-down" aria-hidden="true"></i>
+                        Install App
+                    </button>
+                    <button class="user-btn" aria-label="User menu">
+                        <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <h2>Recently Played</h2>
+            <div class="cards-container">
+                <article class="card">
+                    <img src="./assets/card1img.jpeg" alt="Top 50 - Global" class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily updates of the most played tracks...</p>
+                </article>
+            </div>
+
+            <h2>Trending now near you</h2>
+            <div class="cards-container">
+                <article class="card">
+                    <img src="./assets/card2img.jpeg" alt="Mahiye Jinna Sohna by Darshan Raval" class="card-img">
+                    <p class="card-title">Mahiye Jinna Sohna</p>
+                    <p class="card-info">Darshan Raval</p>
+                </article>
+                <article class="card">
+                    <img src="./assets/card3img.jpeg" alt="Mere Pass Tum Ho - Lofi Mix" class="card-img">
+                    <p class="card-title">Mere Pass Tum Ho</p>
+                    <p class="card-info">Lofi Mix...</p>
+                </article>
+                <article class="card">
+                    <img src="./assets/card4img.jpeg" alt="Alter Ego Naa Ready" class="card-img">
+                    <p class="card-title">Alter Ego Naa Ready</p>
+                    <p class="card-info">Your daily updates of the most played tracks...</p>
+                </article>
+            </div>
+
+            <h2>Featured Charts</h2>
+            <div class="cards-container">
+                <article class="card">
+                    <img src="./assets/card5img.jpeg" alt="Top Songs - Global" class="card-img">
+                    <p class="card-title">Top Songs - Global</p>
+                    <p class="card-info">Your weekly update of the most played tracks right...</p>
+                </article>
+                <article class="card">
+                    <img src="./assets/card6img.jpeg" alt="Top Songs - India" class="card-img">
+                    <p class="card-title">Top Songs - India</p>
+                    <p class="card-info">Your weekly update of the most played tracks right...</p>
+                </article>
+                <article class="card">
+                    <img src="./assets/card1img.jpeg" alt="Top 50 - Global" class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily update of the most played tracks right...</p>
+                </article>
+            </div>
+
+            <footer class="footer">
+                <div class="line"></div>
+            </footer>
+        </main>
+        
+        <footer class="music-player" role="region" aria-label="Music player">
+            <div class="album"></div>
+            <div class="player">
+                <div class="player-controls">
+                    <button class="player-control-icon" aria-label="Shuffle">
+                        <img src="./assets/player_icon1.png" alt="Shuffle">
+                    </button>
+                    <button class="player-control-icon" aria-label="Previous track">
+                        <img src="./assets/player_icon2.png" alt="Previous">
+                    </button>
+                    <button class="player-control-icon play-btn" aria-label="Play/Pause">
+                        <img src="./assets/player_icon3.png" alt="Play">
+                    </button>
+                    <button class="player-control-icon" aria-label="Next track">
+                        <img src="./assets/player_icon4.png" alt="Next">
+                    </button>
+                    <button class="player-control-icon" aria-label="Repeat">
+                        <img src="./assets/player_icon5.png" alt="Repeat">
+                    </button>
+                </div>
+                <div class="playback-bar">
+                    <span class="curr-time">00:00</span>
+                    <input type="range" class="progress-bar" min="0" max="100" step="1" aria-label="Song progress">
+                    <span class="tot-time">3:33</span>
+                </div>
+            </div>
+            <div class="controls"></div>
+        </footer>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
