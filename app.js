@@ -15,14 +15,17 @@ let duration = 213; // 3:33 in seconds
 
 // Initialize event listeners
 function init() {
-  setupPlayerControls();
   setupNavigation();
   setupCardInteractions();
   setupProgressBar();
+  // initialize UI values
+  if (totTimeEl) totTimeEl.textContent = formatTime(duration);
+  if (progressBar) progressBar.value = 0;
 }
 
 // Player Controls
 function setupPlayerControls() {
+  if (!playBtn) return;
   playBtn.addEventListener("click", togglePlayPause);
 }
 
@@ -55,13 +58,13 @@ function simulatePlayback() {
     }
 
     updateProgressDisplay();
-    progressBar.value = (currentTime / duration) * 100;
+    if (progressBar) progressBar.value = (currentTime / duration) * 100;
   }, 100);
 }
 
 // Update time display
 function updateProgressDisplay() {
-  currTimeEl.textContent = formatTime(currentTime);
+  if (currTimeEl) currTimeEl.textContent = formatTime(currentTime);
 }
 
 // Format seconds to MM:SS
@@ -75,6 +78,8 @@ function formatTime(seconds) {
 
 // Progress bar interaction
 function setupProgressBar() {
+  if (!progressBar) return;
+
   progressBar.addEventListener("input", (e) => {
     currentTime = (e.target.value / 100) * duration;
     updateProgressDisplay();
@@ -129,6 +134,7 @@ function setupButtonInteractions() {
   );
 
   playerControlButtons.forEach((btn) => {
+    // avoid adding duplicate listeners to the dedicated play button
     btn.addEventListener("click", (e) => {
       const ariaLabel = btn.getAttribute("aria-label");
       handlePlayerControl(ariaLabel);
@@ -277,7 +283,7 @@ function addAnimationStyles() {
 document.addEventListener("DOMContentLoaded", () => {
   addAnimationStyles();
   init();
-  setupPlayerControlButtons();
+  setupButtonInteractions();
   setupBadgeButtons();
   setupKeyboardShortcuts();
   setupSearch();
