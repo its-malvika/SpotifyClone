@@ -76,6 +76,11 @@ Fork the repo and submit PRs with improvements — accessibility, responsiveness
 
 This is a learning project inspired by Spotify's UI. Use for educational purposes.
 
+## Author
+
+**Malvika Chaudhary**
+
+
 ---
 
-Happy coding! 🎵
+Made with ❤️ - Happy coding!
